@@ -34,6 +34,18 @@ describe(".find") do
     end
   end
 
+describe("#id") do
+  it("increments an id by 1 each time a new item is added") do
+    Things.clear
+    things = Things.new("tacos")
+    things.save()
+    things2 = Things.new("pizza")
+    things.save()
+    expect(things.id()).to(eq(1))
+    expect(things2.id()).to(eq(2))
+  end
+end
+
 # describe(".Things") do
 #   it("returns a list of favorite things") do
 #

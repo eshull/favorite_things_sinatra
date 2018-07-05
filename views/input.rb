@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 # <h1><%= @description %></h1>
 # <% @list.each do |item| %>
 #   <p><%= things.name %></p>
@@ -29,3 +36,7 @@
 #   </div>
 #   <button type="submit" class="btn" >Make List</button>
 # </form>
+
+# <% @items.each do |item| %>
+#    <a href='items/<%= item.id() %>'><%= item.name() %></a>
+#    <% end %> -->

@@ -4,6 +4,8 @@ also_reload('lib/**/*.rb')
 require('./lib/things')
 require('pry')
 
+
+
 get ('/') do
   # @description = "Make a list of your favorite things"
   @list = Things.all()
@@ -16,8 +18,13 @@ post ('/') do
   @list = Things.all()
   erb(:list)
 end
-  # @riddle_one = params.fetch("food")
-  # @riddle_two = params.fetch("car")
+
+get ('/items/:id') do
+  @item = Things.find(params[:id])
+  erb(:output)
+end
+#   @riddle_one = params.fetch("food")
+#   @riddle_two = params.fetch("car")
 #
 # things = Things.new(@riddle_one, @riddle_two)
 #   @riddle_output = things._method()

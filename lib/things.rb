@@ -3,15 +3,15 @@ class Things
   attr_accessor :food
   attr_reader :id
 
-  def initialize(attributes)
-    # @food = food
+  def initialize(food)
+    @food = food
     @id = @@list.length + 1
-    @food = attributes.fetch(:food)
-    @car = attributes.fetch(:car)
-    @color = attributes.fetch(:color)
-    @person = attributes.fetch(:person)
-    @animal = attributes.fetch(:animal)
-    @saying = attributes.fetch(:saying)
+    # @food = attributes.find(:food)
+    # @car = attributes.fetch(:car)
+    # @color = attributes.fetch(:color)
+    # @person = attributes.fetch(:person)
+    # @animal = attributes.fetch(:animal)
+    # @saying = attributes.fetch(:saying)
   end
 
   def self.find(id)
@@ -27,8 +27,6 @@ class Things
     @@list
   end
 
-  def self.find(food)
-  end
 
   def save()
     @@list.push(self)

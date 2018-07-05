@@ -4,7 +4,10 @@
 <!-- <h1><%= @description %></h1> -->
 <% @list.each do |item| %>
   <p><%= item.food %></p>
+  <a href='/items/<%= item.id %>'><%= item.food %></a>
 <% end %>
+
+
 <form action="/" method="post">
   <div class="form-group">
     <label for="food">What is your favorite food?</label>
