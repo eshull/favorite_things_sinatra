@@ -9,8 +9,8 @@ get ('/')do
   erb(:input)
 end
 post ('/output')do
-  @riddle_one = params.fetch("answer_one")
-  @riddle_two = params.fetch("answer_two")
+  @riddle_one = params.fetch("food")
+  @riddle_two = params.fetch("car")
 
 things = Things.new(@riddle_one, @riddle_two)
   @riddle_output = things._method()
