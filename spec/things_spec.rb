@@ -14,6 +14,14 @@ end
     expect(Things.all()).to(eq([things]))
   end
 end
+describe(".clear") do
+  it("clears all items from the list") do
+    things = Things.new("kiwi")
+    things.save()
+    Things.clear()
+    expect(Things.all()).to(eq([]))
+  end
+end
   # it("returns a list of favorite things") do
   #   things = Things.new({:food=> "kiwi", :car=> 7, :color=> "red", :person=> 3, :animal=> "black", :saying=>"dotted"})
   #   expect(things.food()).to(eq("kiwi"))

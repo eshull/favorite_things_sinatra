@@ -23,4 +23,8 @@ class Things
     @@list.push(self)
   end
 
+  def self.clear()
+   @@list = []
+  end
+
 end
