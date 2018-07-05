@@ -2,8 +2,8 @@ class Things
   @@list = []
   attr_accessor :food
 
-  def initialize(attributes)
-    @food = attributes
+  def initialize(food)
+    @food = food
     # @food = attributes.fetch(:food)
     # @car = attributes.fetch(:car)
     # @color = attributes.fetch(:color)
@@ -12,7 +12,7 @@ class Things
     # @saying = attributes.fetch(:saying)
   end
 
-  def self.all
+  def self.all()
     @@list
   end
 
