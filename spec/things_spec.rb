@@ -22,10 +22,25 @@ describe(".clear") do
     expect(Things.all()).to(eq([]))
   end
 end
-  # it("returns a list of favorite things") do
-  #   things = Things.new({:food=> "kiwi", :car=> 7, :color=> "red", :person=> 3, :animal=> "black", :saying=>"dotted"})
-  #   expect(things.food()).to(eq("kiwi"))
-  # end
+
+describe(".find") do
+    it("finds an item based on its id") do
+      things = Things.new("tacos")
+      things.save()
+      things2 = Things.new("pizza")
+      things2.save()
+      expect(Things.find(1)).to(eq(things))
+      expect(Things.find(2)).to(eq(things2))
+    end
+  end
+
+# describe(".Things") do
+#   it("returns a list of favorite things") do
+#
+#     things = Things.new({:food=> "kiwi", :car=> 7, :color=> "red", :person=> 3, :animal=> "black", :saying=>"dotted"})
+#     expect(things.food()).to(eq("kiwi"))
+#   end
+# end
 
 #
 # describe('#riddles') do
